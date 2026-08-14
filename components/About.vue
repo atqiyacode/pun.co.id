@@ -9,21 +9,16 @@ useReveal()
 
 <template>
   <section id="about">
-    <div class="bp-grid" aria-hidden="true"></div>
+    <div class="bg-grid" aria-hidden="true"></div>
     <div class="container">
-      <div class="section-head reveal">
-        <span class="index">Sect. 01 — About</span>
-        <h2>Who We <span class="hl">Are</span></h2>
-      </div>
-
       <div class="about-grid">
-        <div class="about-text reveal">
-          <p v-html="about.heading"></p>
-          <p v-for="p in about.paragraphs" :key="p"><strong>{{ p }}</strong></p>
-
+        <div class="about-text">
+          <span class="eyebrow">{{ about.eyebrow }}</span>
+          <h2>{{ about.title }}</h2>
+          <p style="margin-top:18px">{{ about.heading }}</p>
+          <p v-for="p in about.paragraphs" :key="p">{{ p }}</p>
           <div class="about-fields">
-            <div v-for="(f, i) in about.fields" :key="f.title" class="field-card reveal">
-              <span class="fno">FLD-0{{ i + 1 }}</span>
+            <div v-for="f in about.fields" :key="f.title" class="field-card">
               <div class="field-icon" aria-hidden="true" v-html="icon(f.icon)"></div>
               <h4>{{ f.title }}</h4>
               <p>{{ f.description }}</p>
@@ -31,18 +26,22 @@ useReveal()
           </div>
         </div>
 
-        <div class="about-spec reveal">
-          <div class="about-spec-head">
-            <span>Company <span class="hl">Spec</span></span>
-            <span>CP-2026</span>
-          </div>
-          <div class="about-spec-body">
-            <div class="spec-row"><span class="k">Legal Name</span><span class="v">{{ c.legalName }}</span></div>
-            <div class="spec-row"><span class="k">Established</span><span class="v">{{ c.foundedYear }}</span></div>
-            <div class="spec-row"><span class="k">Sector</span><span class="v">Mining · Forestry · Construction</span></div>
-            <div class="spec-row"><span class="k">Coverage</span><span class="v">Seluruh Indonesia</span></div>
-            <div class="spec-row"><span class="k">Motto</span><span class="v">Layanan Prima, Kebanggaan Kami</span></div>
-            <div class="spec-badge">✔ Siap menerima kontrak penambangan, eksplorasi &amp; konstruksi baru</div>
+        <div class="about-visual">
+          <div class="about-card-stack">
+            <div class="about-card">
+              <div class="big">{{ c.foundedYear }}<small>+</small></div>
+              <h4>Perusahaan Swasta Nasional</h4>
+              <p>Berdiri sejak 2023, berkomitmen menghadirkan layanan prima di sektor pertambangan, eksplorasi hutan, dan konstruksi.</p>
+              <div style="margin-top:20px;display:flex;gap:12px;flex-wrap:wrap">
+                <span style="display:inline-flex;align-items:center;gap:8px;background:var(--accent-soft);color:var(--accent);border-radius:999px;padding:8px 16px;font-size:13px;font-weight:700">
+                  <span aria-hidden="true" v-html="icon('mountain')"></span> Mineral &amp; Batubara
+                </span>
+                <span style="display:inline-flex;align-items:center;gap:8px;background:var(--accent-soft);color:var(--accent);border-radius:999px;padding:8px 16px;font-size:13px;font-weight:700">
+                  <span aria-hidden="true" v-html="icon('tree')"></span> Eksplorasi Hutan
+                </span>
+              </div>
+            </div>
+            <div class="about-badge">Layanan Prima · Kepuasan Pelanggan</div>
           </div>
         </div>
       </div>

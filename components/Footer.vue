@@ -5,7 +5,7 @@ import { icon } from '~/utils/icons'
 const company = await useCompanyData()
 const links = [
   { label: 'Home', href: '#home' },
-  { label: 'About', href: '#about' },
+  { label: 'About Us', href: '#about' },
   { label: 'Visi & Misi', href: '#vision' },
   { label: 'Layanan', href: '#services' },
   { label: 'Proyek', href: '#projects' },
@@ -23,7 +23,7 @@ const scrollTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
 <template>
   <footer class="footer">
     <div class="container footer-inner">
-      <p>&copy; {{ new Date().getFullYear() }} {{ company.company.name }} — Rev. 1.0. All rights reserved.</p>
+      <p>&copy; {{ new Date().getFullYear() }} {{ company.company.name }}. All rights reserved.</p>
       <ul class="footer-links">
         <li v-for="l in links" :key="l.href"><a :href="l.href">{{ l.label }}</a></li>
       </ul>

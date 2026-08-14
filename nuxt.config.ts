@@ -3,12 +3,7 @@ export default defineNuxtConfig({
   ssr: true,
   devtools: { enabled: false },
   css: [
-    '@fontsource/saira-condensed/700.css',
-    '@fontsource/saira-condensed/800.css',
-    '@fontsource/ibm-plex-mono/400.css',
-    '@fontsource/ibm-plex-mono/500.css',
-    '@fontsource/ibm-plex-mono/600.css',
-    '@fontsource/ibm-plex-mono/700.css',
+    '@fontsource-variable/plus-jakarta-sans',
     '~/assets/css/main.css'
   ],
   app: {
@@ -17,7 +12,7 @@ export default defineNuxtConfig({
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'theme-color', content: '#0b1f16' }
+        { name: 'theme-color', content: '#0a1120' }
       ],
       link: [
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }
@@ -28,6 +23,5 @@ export default defineNuxtConfig({
     prerender: {
       routes: ['/']
     }
-  },
-  compatibility: {}
+  }
 })

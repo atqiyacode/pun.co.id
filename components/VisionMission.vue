@@ -10,23 +10,16 @@ useReveal()
 <template>
   <section id="vision">
     <div class="container">
-      <div class="section-head reveal">
-        <span class="index">Sect. 02 — Direction</span>
-        <h2>Visi &amp; <span class="hl">Misi</span></h2>
-      </div>
-
       <div class="vm-grid">
-        <div class="vm-card reveal">
-          <span class="vm-no">01</span>
+        <div class="vm-card">
           <div class="vm-icon" aria-hidden="true" v-html="icon('eye')"></div>
-          <span class="eyebrow-lbl">Vision</span>
+          <span class="eyebrow">{{ vision.eyebrow }}</span>
           <h3>{{ vision.title }}</h3>
           <p>{{ vision.description }}</p>
         </div>
-        <div class="vm-card reveal">
-          <span class="vm-no">02</span>
+        <div class="vm-card">
           <div class="vm-icon" aria-hidden="true" v-html="icon('target')"></div>
-          <span class="eyebrow-lbl">Mission</span>
+          <span class="eyebrow">{{ mission.eyebrow }}</span>
           <h3>{{ mission.title }}</h3>
           <p>{{ mission.description }}</p>
         </div>

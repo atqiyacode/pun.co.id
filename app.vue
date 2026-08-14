@@ -11,7 +11,7 @@ useHead({
     { name: 'keywords', content: seo.keywords },
     { name: 'author', content: c.name },
     { name: 'robots', content: 'index, follow' },
-    { name: 'theme-color', content: '#08140e' },
+    { name: 'theme-color', content: '#0a1120' },
     // OpenGraph
     { property: 'og:type', content: 'website' },
     { property: 'og:site_name', content: c.name },

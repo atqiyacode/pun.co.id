@@ -17,37 +17,31 @@ const items = [
 <template>
   <section id="contact">
     <div class="container">
-      <div class="section-head reveal">
-        <span class="index">Sect. 06 — Contact</span>
-        <h2>Hubungi <span class="hl">Kami</span></h2>
+      <div class="section-head">
+        <span class="eyebrow">Contact</span>
+        <h2>Hubungi Kami</h2>
         <p>Mari wujudkan kebutuhan kontrak Anda bersama kami — layanan prima adalah dedikasi kami.</p>
       </div>
 
       <div class="contact-grid">
-        <div class="contact-card reveal">
-          <div class="contact-card-head">
-            <span>Kontak <span class="hl">Resmi</span></span>
-            <span>24/7</span>
-          </div>
-          <div class="contact-list">
-            <div v-for="item in items" :key="item.label" class="contact-item">
-              <div class="contact-icon" aria-hidden="true" v-html="icon(item.icon)"></div>
-              <div>
-                <h4>{{ item.label }}</h4>
-                <a v-if="item.href" :href="item.href" target="_blank" rel="noopener">{{ item.value }}</a>
-                <p v-else>{{ item.value }}</p>
-              </div>
+        <div class="contact-card">
+          <div v-for="item in items" :key="item.label" class="contact-item">
+            <div class="contact-icon" aria-hidden="true" v-html="icon(item.icon)"></div>
+            <div>
+              <h4>{{ item.label }}</h4>
+              <a v-if="item.href" :href="item.href" target="_blank" rel="noopener">{{ item.value }}</a>
+              <p v-else>{{ item.value }}</p>
             </div>
           </div>
           <div class="contact-ctas">
-            <a class="btn btn-orange" :href="contact.whatsappHref" target="_blank" rel="noopener">
+            <a class="btn btn-gold" :href="contact.whatsappHref" target="_blank" rel="noopener">
               <span aria-hidden="true" v-html="icon('wa')"></span> WhatsApp
             </a>
-            <a class="btn btn-paper" :href="contact.phoneHref">Telepon</a>
+            <a class="btn btn-ghost" :href="contact.phoneHref">Telepon</a>
           </div>
         </div>
 
-        <div class="contact-map reveal">
+        <div class="contact-map">
           <iframe
             :src="contact.mapsEmbed"
             title="Lokasi PT. Prima Utama Nasional"

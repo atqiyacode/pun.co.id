@@ -8,11 +8,11 @@ useReveal()
 
 <template>
   <section class="quote-section">
-    <div class="bp-grid" aria-hidden="true"></div>
-    <div class="container reveal">
-      <div class="quote-strip">Field Motto</div>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="container">
+      <div class="quote-mark" aria-hidden="true">&ldquo;</div>
       <p class="quote-text">{{ quote.text }}</p>
-      <div class="quote-author">— {{ quote.author }}</div>
+      <div class="quote-author">@{{ quote.author }}</div>
     </div>
   </section>
 </template>

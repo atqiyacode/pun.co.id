@@ -1,9 +1,10 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 
+const company = await useCompanyData()
 const links = [
   { label: 'Home', href: '#home' },
-  { label: 'About', href: '#about' },
+  { label: 'About Us', href: '#about' },
   { label: 'Services', href: '#services' },
   { label: 'Projects', href: '#projects' },
   { label: 'Contact', href: '#contact' }
@@ -25,8 +26,8 @@ function go() { open.value = false }
   <header class="nav" :class="{ scrolled }">
     <div class="container nav-inner">
       <a href="#home" class="logo" aria-label="PT. Prima Utama Nasional — Home">
-        <span class="logo-mark">PUN</span>
-        <span class="logo-text">Prima Utama Nasional<small>EST. 2023 — CONTRACTOR</small></span>
+        <span class="logo-mark" aria-hidden="true">PUN</span>
+        <span>Prima Utama Nasional</span>
       </a>
 
       <nav :aria-label="'Navigasi utama'">
@@ -35,7 +36,7 @@ function go() { open.value = false }
             <a :href="l.href" @click="go">{{ l.label }}</a>
           </li>
           <li>
-            <a href="#contact" class="btn btn-orange nav-cta" @click="go">Hubungi Kami</a>
+            <a :href="'#contact'" class="btn btn-gold nav-cta" @click="go">Hubungi Kami</a>
           </li>
         </ul>
       </nav>

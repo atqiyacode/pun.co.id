@@ -1,26 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
   <defs>
     <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#0d1210"/>
-      <stop offset="1" stop-color="#1a241e"/>
+      <stop offset="0" stop-color="#0a1120"/>
+      <stop offset="1" stop-color="#14213d"/>
     </linearGradient>
     <radialGradient id="sun" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#f0d78c"/>
+      <stop offset="0" stop-color="#f5d97a"/>
       <stop offset="1" stop-color="#d4af37" stop-opacity="0"/>
     </radialGradient>
   </defs>
   <rect width="1200" height="630" fill="url(#sky)"/>
   <circle cx="940" cy="240" r="170" fill="url(#sun)"/>
   <circle cx="940" cy="240" r="50" fill="#d4af37"/>
-  <path d="M0 430 L240 300 L420 400 L640 260 L860 410 L1080 300 L1200 380 L1200 630 L0 630 Z" fill="#16301f" opacity="0.8"/>
-  <path d="M0 520 L200 420 L420 500 L680 390 L900 510 L1120 420 L1200 470 L1200 630 L0 630 Z" fill="#0d1210"/>
+  <path d="M0 430 L240 300 L420 400 L640 260 L860 410 L1080 300 L1200 380 L1200 630 L0 630 Z" fill="#14213d" opacity="0.8"/>
+  <path d="M0 520 L200 420 L420 500 L680 390 L900 510 L1120 420 L1200 470 L1200 630 L0 630 Z" fill="#0a1120"/>
   <rect x="70" y="80" width="220" height="80" rx="10" fill="#d4af37"/>
-  <text x="180" y="140" font-family="Arial Narrow, Arial, sans-serif" font-size="46" font-weight="900" fill="#0d1210" text-anchor="middle">PUN</text>
-  <text x="70" y="230" font-family="Arial Narrow, Arial, sans-serif" font-size="44" font-weight="900" fill="#e8e4da">PT. PRIMA UTAMA NASIONAL</text>
+  <text x="180" y="140" font-family="Arial Narrow, Arial, sans-serif" font-size="46" font-weight="900" fill="#0a1120" text-anchor="middle">PUN</text>
+  <text x="70" y="230" font-family="Arial Narrow, Arial, sans-serif" font-size="44" font-weight="900" fill="#e8eef7">PT. PRIMA UTAMA NASIONAL</text>
   <text x="70" y="280" font-family="Arial Narrow, Arial, sans-serif" font-size="22" font-weight="700" fill="#d4af37" letter-spacing="4">CONTRACTOR · MINING · TRADING</text>
-  <text x="70" y="340" font-family="Courier New, monospace" font-size="18" fill="#a8b2aa">Kontraktor pertambangan, eksplorasi hutan &amp; konstruksi.</text>
-  <text x="70" y="370" font-family="Courier New, monospace" font-size="18" fill="#a8b2aa">Sejak 2023 — Kepuasan pelanggan, kebanggaan kami.</text>
+  <text x="70" y="340" font-family="Courier New, monospace" font-size="18" fill="#8fa0b8">Kontraktor pertambangan, eksplorasi hutan &amp; konstruksi.</text>
+  <text x="70" y="370" font-family="Courier New, monospace" font-size="18" fill="#8fa0b8">Sejak 2023 — Kepuasan pelanggan, kebanggaan kami.</text>
   <rect x="70" y="420" width="1060" height="3" fill="#d4af37" opacity="0.6"/>
   <rect x="70" y="460" width="180" height="70" rx="6" fill="#d4af37"/>
-  <text x="160" y="510" font-family="Arial Narrow, Arial, sans-serif" font-size="30" font-weight="900" fill="#0d1210" text-anchor="middle">EST. 2023</text>
+  <text x="160" y="510" font-family="Arial Narrow, Arial, sans-serif" font-size="30" font-weight="900" fill="#0a1120" text-anchor="middle">EST. 2023</text>
 </svg>
