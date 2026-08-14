@@ -1,7 +1,9 @@
 <script setup>
 import { useReveal } from '~/composables/useReveal'
+import { useLocaleItems } from '~/composables/useLocaleItems'
 
 useReveal()
+const items = useLocaleItems('journey.items', 4, ['year', 'title', 'description'])
 </script>
 
 <template>
@@ -13,7 +15,7 @@ useReveal()
         <p>{{ $t('journey.subtitle') }}</p>
       </div>
       <div class="timeline">
-        <div v-for="j in $tm('journey.items')" :key="j.year" class="tl-item">
+        <div v-for="j in items" :key="j.year" class="tl-item">
           <span class="tl-dot" aria-hidden="true"></span>
           <div class="tl-year">{{ j.year }}</div>
           <h3>{{ j.title }}</h3>

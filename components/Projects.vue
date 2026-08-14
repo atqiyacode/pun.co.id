@@ -1,8 +1,10 @@
 <script setup>
 import { icon } from '~/utils/icons'
 import { useReveal } from '~/composables/useReveal'
+import { useLocaleItems } from '~/composables/useLocaleItems'
 
 useReveal()
+const items = useLocaleItems('projects.items', 2, ['title', 'category', 'description', 'location', 'client'])
 
 const visualIcon = (title) => {
   const t = String(title || '').toLowerCase()
@@ -22,7 +24,7 @@ const visualIcon = (title) => {
         <p>{{ $t('projects.subtitle') }}</p>
       </div>
       <div class="projects-grid">
-        <article v-for="p in $tm('projects.items')" :key="p.title" class="project-card">
+        <article v-for="p in items" :key="p.title" class="project-card">
           <div class="project-visual">
             <span class="project-cat">{{ p.category }}</span>
             <span class="pv-icon" aria-hidden="true" v-html="visualIcon(p.title)"></span>

@@ -1,10 +1,12 @@
 <script setup>
 import { icon } from '~/utils/icons'
 import { useReveal } from '~/composables/useReveal'
+import { useLocaleItems } from '~/composables/useLocaleItems'
 
 const company = await useCompanyData()
-const { about: fields, company: c } = company
+const { company: c } = company
 useReveal()
+const fields = useLocaleItems('about.fields', 4, ['title', 'description', 'icon'])
 </script>
 
 <template>
@@ -19,7 +21,7 @@ useReveal()
           <p>{{ $t('about.paragraph1') }}</p>
           <p>{{ $t('about.paragraph2') }}</p>
           <div class="about-fields">
-            <div v-for="f in $tm('about.fields')" :key="f.title" class="field-card">
+            <div v-for="f in fields" :key="f.title" class="field-card">
               <div class="field-icon" aria-hidden="true" v-html="icon(f.icon)"></div>
               <h4>{{ f.title }}</h4>
               <p>{{ f.description }}</p>

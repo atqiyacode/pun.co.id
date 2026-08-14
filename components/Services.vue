@@ -1,8 +1,10 @@
 <script setup>
 import { icon } from '~/utils/icons'
 import { useReveal } from '~/composables/useReveal'
+import { useLocaleItems } from '~/composables/useLocaleItems'
 
 useReveal()
+const items = useLocaleItems('services.items', 3, ['title', 'description', 'icon'])
 </script>
 
 <template>
@@ -15,7 +17,7 @@ useReveal()
         <p>{{ $t('services.subtitle') }}</p>
       </div>
       <div class="services-grid">
-        <div v-for="(s, i) in $tm('services.items')" :key="s.title" class="service-card">
+        <div v-for="(s, i) in items" :key="s.title" class="service-card">
           <div class="num" aria-hidden="true">0{{ i + 1 }}</div>
           <div class="service-icon" aria-hidden="true" v-html="icon(s.icon)"></div>
           <h3>{{ s.title }}</h3>
