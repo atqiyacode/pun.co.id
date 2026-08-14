@@ -1,4 +1,4 @@
-name: Deploy to Netlify
+name: Deploy to VPS
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -17,13 +17,15 @@ jobs:
           cache: npm
 
       - run: npm ci
-
       - run: npm run generate
 
-      - uses: nwtgck/actions-netlify@v3
+      - name: Deploy static site via rsync
+        uses: burnett01/rsync-deployments@7.0.1
         with:
-          publish-dir: .output/public
-          production-deploy: true
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          switches: -avz --delete --exclude='.well-known'
+          path: .output/public/
+          remote_path: ${{ secrets.DEPLOY_PATH }}
+          remote_host: ${{ secrets.SSH_HOST }}
+          remote_user: ${{ secrets.SSH_USER }}
+          remote_key: ${{ secrets.SSH_KEY }}
+          remote_port: ${{ secrets.SSH_PORT || 22 }}
