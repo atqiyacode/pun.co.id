@@ -89,7 +89,11 @@
     "mapTitle": "Lokasi PT. Prima Utama Nasional"
   },
   "footer": {
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "tagline": "Perusahaan kontraktor pertambangan, eksplorasi hutan, dan pembangunan fasilitas penunjang.",
+    "quickLinks": "Menu",
+    "contact": "Kontak",
+    "address": "Kartika Chandra Office Tower I, Suite 008-009, Jl. Jend. Gatot Subroto Kav. 18-20, Karet Semanggi, Setiabudi, Jakarta Selatan 12930"
   },
   "scrollTop": "Kembali ke atas",
   "notfound": {
