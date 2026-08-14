@@ -5,7 +5,7 @@ import { useReveal } from '~/composables/useReveal'
 useReveal()
 
 const visualIcon = (title) => {
-  const t = (title || '').toLowerCase()
+  const t = String(title || '').toLowerCase()
   if (t.includes('batubara') || t.includes('coal')) return icon('coal')
   if (t.includes('nikel') || t.includes('nickel')) return icon('nickel')
   return icon('mountain')
