@@ -1,5 +1,6 @@
 <script setup>
 import { icon } from '~/utils/icons'
+import { theme } from '~/composables/useTheme'
 
 const company = await useCompanyData()
 const { hero } = company
@@ -10,10 +11,15 @@ const { hero } = company
     <div class="hero-bg" aria-hidden="true">
       <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice" style="position:absolute;inset:0;width:100%;height:100%;display:block;max-width:100%;overflow:visible">
         <defs>
+          <radialGradient id="orbGlow" cx="0.5" cy="0.5" r="0.5">
+            <stop offset="0%" stop-color="var(--hero-orb-glow1)"/>
+            <stop offset="55%" stop-color="var(--hero-orb-glow2)"/>
+            <stop offset="100%" stop-color="var(--hero-orb-glow2)" stop-opacity="0"/>
+          </radialGradient>
           <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#0a1120"/>
-            <stop offset="55%" stop-color="#0d1730"/>
-            <stop offset="100%" stop-color="#14213d"/>
+            <stop offset="0%" stop-color="var(--sky1)"/>
+            <stop offset="55%" stop-color="var(--sky2)"/>
+            <stop offset="100%" stop-color="var(--sky3)"/>
           </linearGradient>
           <radialGradient id="sun" cx="0.5" cy="0.5" r="0.5">
             <stop offset="0%" stop-color="#f5d97a"/>
@@ -21,17 +27,22 @@ const { hero } = company
             <stop offset="100%" stop-color="#d4af37" stop-opacity="0"/>
           </radialGradient>
           <linearGradient id="m1" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#14213d"/>
-            <stop offset="100%" stop-color="#0d1730"/>
+            <stop offset="0%" stop-color="var(--m1a)"/>
+            <stop offset="100%" stop-color="var(--m1b)"/>
           </linearGradient>
         </defs>
         <rect width="1440" height="900" fill="url(#sky)"/>
-        <circle cx="1050" cy="330" r="190" fill="url(#sun)"/>
-        <circle cx="1050" cy="330" r="62" fill="#f5d97a" opacity="0.95"/>
-        <path d="M0 560 L220 430 L420 540 L640 400 L860 540 L1060 420 L1240 530 L1440 440 L1440 900 L0 900 Z" fill="#14213d" opacity="0.75"/>
+        <circle cx="1050" cy="330" r="190" fill="url(#orbGlow)"/>
+        <circle cx="1050" cy="330" r="62" fill="var(--hero-orb)" opacity="0.95"/>
+        <g id="moon-crater" :data-hidden="theme === 'light'" fill="#0a1120" opacity="0.3">
+          <circle cx="1072" cy="312" r="8"/>
+          <circle cx="1034" cy="345" r="5.5"/>
+          <circle cx="1066" cy="352" r="4"/>
+        </g>
+        <path d="M0 560 L220 430 L420 540 L640 400 L860 540 L1060 420 L1240 530 L1440 440 L1440 900 L0 900 Z" fill="var(--m1a)" opacity="0.75"/>
         <path d="M0 660 L260 520 L500 640 L760 500 L1000 640 L1220 540 L1440 630 L1440 900 L0 900 Z" fill="url(#m1)"/>
-        <path d="M0 780 L180 660 L380 760 L620 640 L860 770 L1100 660 L1300 760 L1440 700 L1440 900 L0 900 Z" fill="#0a1120"/>
-        <g fill="#f5d97a" opacity="0.14">
+        <path d="M0 780 L180 660 L380 760 L620 640 L860 770 L1100 660 L1300 760 L1440 700 L1440 900 L0 900 Z" fill="var(--bg)"/>
+        <g fill="var(--star)" opacity="0.14">
           <circle cx="180" cy="240" r="2"/><circle cx="320" cy="180" r="1.6"/><circle cx="520" cy="300" r="1.4"/>
           <circle cx="700" cy="200" r="2"/><circle cx="880" cy="260" r="1.5"/><circle cx="1250" cy="210" r="1.8"/>
         </g>

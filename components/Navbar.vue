@@ -1,5 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
+import { icon } from '~/utils/icons'
+import { theme, initTheme, toggleTheme } from '~/composables/useTheme'
 
 const company = await useCompanyData()
 const links = [
@@ -14,6 +16,7 @@ const open = ref(false)
 
 const onScroll = () => { scrolled.value = window.scrollY > 40 }
 onMounted(() => {
+  initTheme()
   window.addEventListener('scroll', onScroll, { passive: true })
   onScroll()
 })
@@ -42,6 +45,14 @@ function go() { open.value = false }
       </nav>
 
       <div class="nav-right">
+        <button
+          class="theme-toggle"
+          @click="toggleTheme"
+          :aria-label="theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
+          :title="theme === 'dark' ? 'Light mode' : 'Dark mode'"
+        >
+          <span aria-hidden="true" v-html="icon(theme === 'dark' ? 'sun' : 'moon')"></span>
+        </button>
         <button class="lang-switch" @click="$i18n.setLocale($i18n.locale === 'id' ? 'en' : 'id')" :aria-label="'Switch language'">
           {{ $i18n.locale === 'id' ? 'EN' : 'ID' }}
         </button>
