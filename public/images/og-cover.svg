@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f4f1e8"/>
+  <g stroke="#c9c3b4" stroke-width="1" opacity="0.5">
+    <path d="M0 32 H1200 M0 64 H1200 M0 96 H1200 M0 128 H1200 M0 160 H1200 M0 192 H1200 M0 224 H1200 M0 256 H1200 M0 288 H1200 M0 320 H1200 M0 352 H1200 M0 384 H1200 M0 416 H1200 M0 448 H1200 M0 480 H1200 M0 512 H1200 M0 544 H1200 M0 576 H1200 M0 608 H1200"/>
+    <path d="M32 0 V630 M64 0 V630 M96 0 V630 M128 0 V630 M160 0 V630 M192 0 V630 M224 0 V630 M256 0 V630 M288 0 V630 M320 0 V630 M352 0 V630 M384 0 V630 M416 0 V630 M448 0 V630 M480 0 V630 M512 0 V630 M544 0 V630 M576 0 V630 M608 0 V630 M640 0 V630 M672 0 V630 M704 0 V630 M736 0 V630 M768 0 V630 M800 0 V630 M832 0 V630 M864 0 V630 M896 0 V630 M928 0 V630 M960 0 V630 M992 0 V630 M1024 0 V630 M1056 0 V630 M1088 0 V630 M1120 0 V630 M1152 0 V630 M1184 0 V630"/>
+  </g>
+  <rect x="48" y="48" width="300" height="110" fill="#1c1a16"/>
+  <text x="198" y="130" font-family="Arial Narrow, Arial, sans-serif" font-size="60" font-weight="900" fill="#f4f1e8" text-anchor="middle">PUN</text>
+  <rect x="48" y="48" width="300" height="110" fill="none" stroke="#e8541e" stroke-width="6"/>
+  <text x="60" y="220" font-family="Arial Narrow, Arial, sans-serif" font-size="56" font-weight="900" fill="#1c1a16">PT. PRIMA UTAMA NASIONAL</text>
+  <text x="60" y="270" font-family="Arial Narrow, Arial, sans-serif" font-size="30" font-weight="700" fill="#e8541e" letter-spacing="4">CONTRACTOR · MINING · TRADING</text>
+  <text x="60" y="330" font-family="Courier New, monospace" font-size="20" fill="#4a463d">Kontraktor pertambangan, eksplorasi hutan &amp; konstruksi.</text>
+  <text x="60" y="365" font-family="Courier New, monospace" font-size="20" fill="#4a463d">Sejak 2023 — Kepuasan pelanggan, kebanggaan kami.</text>
+  <rect x="48" y="430" width="1104" height="6" fill="#e8541e"/>
+  <rect x="60" y="480" width="240" height="90" fill="#e8541e" stroke="#1c1a16" stroke-width="4"/>
+  <text x="180" y="545" font-family="Arial Narrow, Arial, sans-serif" font-size="34" font-weight="900" fill="#f4f1e8" text-anchor="middle">EST. 2023</text>
+</svg>
