@@ -1,0 +1,100 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "projects": "Projects",
+    "contact": "Contact",
+    "cta": "Contact Us"
+  },
+  "hero": {
+    "subtitle": "A contractor company in mining, forest exploration, and supporting facilities development — present across projects and locations in Indonesia since 2023.",
+    "statFounded": "Established",
+    "statYears": "Years in Service",
+    "statSectors": "Core Sectors",
+    "statCommitment": "Prime Commitment",
+    "ctaServices": "View Services",
+    "ctaContact": "Contact Us"
+  },
+  "about": {
+    "eyebrow": "About Us",
+    "title": "Who We Are",
+    "heading": "A private company dedicated to building the nation — from forests, mines, to supporting facilities.",
+    "paragraph1": "PT. Prima Utama Nasional (PUN), established in 2023, is a private company engaged in building contracting, supporting facilities, forest exploration and its contents, as well as mineral and coal mining.",
+    "paragraph2": "Delivering prime service is our dedication, and customer satisfaction is our pride.",
+    "cardTitle": "National Private Company",
+    "cardText": "Established in 2023, committed to delivering prime services in mining, forest exploration, and construction.",
+    "badge": "Prime Service · Customer Satisfaction",
+    "fields": [
+      { "title": "Building Contractor", "description": "Quality building & infrastructure construction.", "icon": "building" },
+      { "title": "Supporting Facilities", "description": "Development of operational support facilities.", "icon": "gear" },
+      { "title": "Forest Exploration", "description": "Forest exploration and its contents.", "icon": "tree" },
+      { "title": "Mining", "description": "Mineral and coal mining.", "icon": "mountain" }
+    ]
+  },
+  "vision": {
+    "eyebrow": "Vision",
+    "title": "To become a key player in the mining and forestry contractor sector.",
+    "description": "To become an industry leader in sustainable and innovative solutions, growing the company to be bigger and make an impact on the world."
+  },
+  "mission": {
+    "eyebrow": "Mission",
+    "title": "Present across projects and locations in Indonesia.",
+    "description": "To deliver real benefits to local communities through our presence across various projects and locations in Indonesia."
+  },
+  "journey": {
+    "eyebrow": "Our Journey",
+    "title": "Our Journey",
+    "subtitle": "The story of our company through the years — every step is a commitment to prime service.",
+    "items": [
+      { "year": "2023", "title": "Company Founded", "description": "PT. Prima Utama Nasional was officially established, taking its first steps in the mining & construction industry." },
+      { "year": "2024", "title": "Operational Expansion", "description": "Expanding operations and building trust across projects in Indonesia." },
+      { "year": "2025", "title": "High-Grade Nickel Mining", "description": "Playing a role in high-grade nickel mining to meet smelter demands." },
+      { "year": "2026", "title": "Looking Ahead", "description": "Continuously growing, innovating, and delivering greater impact to the world." }
+    ]
+  },
+  "quote": {
+    "text": "Dream big, work hard, and create magic.",
+    "author": "pt.pun"
+  },
+  "services": {
+    "eyebrow": "Our Service",
+    "title": "Our Services",
+    "subtitle": "Do it wholeheartedly, or forget it entirely — that is our working principle in every mining operation & contract.",
+    "items": [
+      { "title": "Coal Mining", "description": "Proper mining techniques yield good results and cost efficiency.", "icon": "coal" },
+      { "title": "Nickel Mining", "description": "High-grade nickel mining demands high precision to avoid materials that can degrade the grade.", "icon": "nickel" },
+      { "title": "Trading", "description": "The trust clients place in us to fulfill their contract needs.", "icon": "trade" }
+    ]
+  },
+  "projects": {
+    "eyebrow": "Our Project",
+    "title": "What We've Done",
+    "subtitle": "Tangible proof of our commitment to fulfilling client contract needs across locations in Indonesia.",
+    "items": [
+      { "title": "Coal — East Kalimantan", "category": "Coal", "description": "Coal mining in East Kalimantan, fulfilling contract needs of Indonesia Power.", "location": "East Kalimantan", "client": "Indonesia Power" },
+      { "title": "High-Grade Nickel", "category": "Nickel", "description": "High-grade nickel mining to meet smelter demands.", "location": "Indonesia", "client": "Smelter Partner" }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Contact Us",
+    "subtitle": "Let's realize your contract needs together — prime service is our dedication.",
+    "phoneLabel": "Phone / WhatsApp",
+    "emailLabel": "Email",
+    "websiteLabel": "Website",
+    "addressLabel": "Address",
+    "whatsapp": "WhatsApp",
+    "call": "Call",
+    "mapTitle": "PT. Prima Utama Nasional Location"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  },
+  "scrollTop": "Back to top",
+  "seo": {
+    "title": "PT. Prima Utama Nasional — Mining, Forest Exploration & Construction Contractor",
+    "description": "PT. Prima Utama Nasional (PUN): mineral & coal mining contractor, forest exploration, and supporting facilities development in Indonesia since 2023. Customer satisfaction is our pride.",
+    "keywords": "PT Prima Utama Nasional, PUN, mining contractor, coal mining, nickel mining, forest exploration, building contractor, East Kalimantan, Indonesia Power, South Jakarta"
+  }
+}

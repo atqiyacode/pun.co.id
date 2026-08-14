@@ -6,21 +6,21 @@ const company = await useCompanyData()
 const { contact } = company.company
 useReveal()
 
-const items = [
-  { label: 'Telepon / WhatsApp', value: contact.phone, href: contact.phoneHref, icon: 'phone' },
-  { label: 'Email', value: contact.email, href: `mailto:${contact.email}`, icon: 'mail' },
-  { label: 'Website', value: 'www.pun.co.id', href: `https://${contact.website.replace(/^https?:\/\//, '')}`, icon: 'globe' },
-  { label: 'Alamat', value: `${contact.address}, ${contact.addressDetail}`, href: null, icon: 'pin' }
-]
+const items = computed(() => [
+  { label: $t('contact.phoneLabel'), value: contact.phone, href: contact.phoneHref, icon: 'phone' },
+  { label: $t('contact.emailLabel'), value: contact.email, href: `mailto:${contact.email}`, icon: 'mail' },
+  { label: $t('contact.websiteLabel'), value: 'www.pun.co.id', href: `https://${contact.website.replace(/^https?:\/\//, '')}`, icon: 'globe' },
+  { label: $t('contact.addressLabel'), value: `${contact.address}, ${contact.addressDetail}`, href: null, icon: 'pin' }
+])
 </script>
 
 <template>
   <section id="contact">
     <div class="container">
       <div class="section-head">
-        <span class="eyebrow">Contact</span>
-        <h2>Hubungi Kami</h2>
-        <p>Mari wujudkan kebutuhan kontrak Anda bersama kami — layanan prima adalah dedikasi kami.</p>
+        <span class="eyebrow">{{ $t('contact.eyebrow') }}</span>
+        <h2>{{ $t('contact.title') }}</h2>
+        <p>{{ $t('contact.subtitle') }}</p>
       </div>
 
       <div class="contact-grid">
@@ -35,16 +35,16 @@ const items = [
           </div>
           <div class="contact-ctas">
             <a class="btn btn-gold" :href="contact.whatsappHref" target="_blank" rel="noopener">
-              <span aria-hidden="true" v-html="icon('wa')"></span> WhatsApp
+              <span aria-hidden="true" v-html="icon('wa')"></span> {{ $t('contact.whatsapp') }}
             </a>
-            <a class="btn btn-ghost" :href="contact.phoneHref">Telepon</a>
+            <a class="btn btn-ghost" :href="contact.phoneHref">{{ $t('contact.call') }}</a>
           </div>
         </div>
 
         <div class="contact-map">
           <iframe
             :src="contact.mapsEmbed"
-            title="Lokasi PT. Prima Utama Nasional"
+            :title="$t('contact.mapTitle')"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
             allowfullscreen

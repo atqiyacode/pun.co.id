@@ -45,17 +45,17 @@ const { hero } = company
           {{ hero.titleLine1 }}
           <span class="grad">{{ hero.titleLine2 }}</span>
         </h1>
-        <p class="hero-sub">{{ hero.subtitle }}</p>
+        <p class="hero-sub">{{ $t('hero.subtitle') }}</p>
         <div class="hero-ctas">
-          <a href="#services" class="btn btn-gold">Lihat Layanan <span aria-hidden="true" v-html="icon('arrow')"></span></a>
-          <a href="#contact" class="btn btn-ghost">Hubungi Kami</a>
+          <a href="#services" class="btn btn-gold">{{ $t('hero.ctaServices') }} <span aria-hidden="true" v-html="icon('arrow')"></span></a>
+          <a href="#contact" class="btn btn-ghost">{{ $t('hero.ctaContact') }}</a>
         </div>
       </div>
 
       <div class="hero-stats">
-        <div v-for="s in hero.stats" :key="s.label" class="stat">
+        <div v-for="s in hero.stats" :key="s.labelKey" class="stat">
           <div class="stat-value">{{ s.value }}</div>
-          <div class="stat-label">{{ s.label }}</div>
+          <div class="stat-label">{{ $t(s.labelKey) }}</div>
         </div>
       </div>
     </div>

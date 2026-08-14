@@ -6,6 +6,18 @@ export default defineNuxtConfig({
     '@fontsource-variable/plus-jakarta-sans',
     '~/assets/css/main.css'
   ],
+  modules: ['@nuxtjs/i18n'],
+  i18n: {
+    locales: [
+      { code: 'id', name: 'Indonesia', file: 'id.json', iso: 'id-ID' },
+      { code: 'en', name: 'English', file: 'en.json', iso: 'en-US' }
+    ],
+    defaultLocale: 'id',
+    lazy: true,
+    langDir: '.',
+    strategy: 'prefix_except_default',
+    detectBrowserLanguage: false
+  },
   app: {
     head: {
       htmlAttrs: { lang: 'id' },
@@ -21,7 +33,7 @@ export default defineNuxtConfig({
   },
   nitro: {
     prerender: {
-      routes: ['/']
+      routes: ['/', '/en']
     }
   }
 })

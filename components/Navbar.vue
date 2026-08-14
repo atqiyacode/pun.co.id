@@ -3,11 +3,11 @@ import { ref, onMounted } from 'vue'
 
 const company = await useCompanyData()
 const links = [
-  { label: 'Home', href: '#home' },
-  { label: 'About Us', href: '#about' },
-  { label: 'Services', href: '#services' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Contact', href: '#contact' }
+  { labelKey: 'nav.home', href: '#home' },
+  { labelKey: 'nav.about', href: '#about' },
+  { labelKey: 'nav.services', href: '#services' },
+  { labelKey: 'nav.projects', href: '#projects' },
+  { labelKey: 'nav.contact', href: '#contact' }
 ]
 const scrolled = ref(false)
 const open = ref(false)
@@ -26,24 +26,29 @@ function go() { open.value = false }
   <header class="nav" :class="{ scrolled }">
     <div class="container nav-inner">
       <a href="#home" class="logo" aria-label="PT. Prima Utama Nasional — Home">
-        <span class="logo-mark" aria-hidden="true">PUN</span>
-        <span>Prima Utama Nasional</span>
+        <span class="logo-mark" aria-hidden="true">{{ company.company.shortName }}</span>
+        <span>{{ company.company.name }}</span>
       </a>
 
-      <nav :aria-label="'Navigasi utama'">
+      <nav :aria-label="$t('nav.home')">
         <ul class="nav-links" :class="{ open }">
           <li v-for="l in links" :key="l.href">
-            <a :href="l.href" @click="go">{{ l.label }}</a>
+            <a :href="l.href" @click="go">{{ $t(l.labelKey) }}</a>
           </li>
           <li>
-            <a :href="'#contact'" class="btn btn-gold nav-cta" @click="go">Hubungi Kami</a>
+            <a href="#contact" class="btn btn-gold nav-cta" @click="go">{{ $t('nav.cta') }}</a>
           </li>
         </ul>
       </nav>
 
-      <button class="hamburger" :class="{ open }" @click="toggle" :aria-label="open ? 'Tutup menu' : 'Buka menu'" :aria-expanded="open">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav-right">
+        <button class="lang-switch" @click="$i18n.setLocale($i18n.locale === 'id' ? 'en' : 'id')" :aria-label="'Switch language'">
+          {{ $i18n.locale === 'id' ? 'EN' : 'ID' }}
+        </button>
+        <button class="hamburger" :class="{ open }" @click="toggle" :aria-label="open ? $t('scrollTop') : $t('nav.home')" :aria-expanded="open">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 </template>

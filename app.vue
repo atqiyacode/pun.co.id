@@ -1,33 +1,42 @@
 <script setup>
+const { t, locale } = useI18n()
 const company = await useCompanyData()
-const { seo, company: c, services } = company
+const c = company.company
 const siteUrl = 'https://www.pun.co.id'
 
+const seoTitle = computed(() => t('seo.title'))
+const seoDesc = computed(() => t('seo.description'))
+const seoKeywords = computed(() => t('seo.keywords'))
+const currentUrl = computed(() => locale.value === 'id' ? siteUrl : `${siteUrl}/en`)
+
 useHead({
-  title: seo.title,
+  title: seoTitle,
   titleTemplate: '%s',
+  htmlAttrs: { lang: locale },
   meta: [
-    { name: 'description', content: seo.description },
-    { name: 'keywords', content: seo.keywords },
+    { name: 'description', content: seoDesc },
+    { name: 'keywords', content: seoKeywords },
     { name: 'author', content: c.name },
     { name: 'robots', content: 'index, follow' },
     { name: 'theme-color', content: '#0a1120' },
-    // OpenGraph
     { property: 'og:type', content: 'website' },
     { property: 'og:site_name', content: c.name },
-    { property: 'og:title', content: seo.title },
-    { property: 'og:description', content: seo.description },
-    { property: 'og:url', content: siteUrl },
-    { property: 'og:image', content: `${siteUrl}${seo.ogImage}` },
-    { property: 'og:locale', content: 'id_ID' },
-    // Twitter
+    { property: 'og:title', content: seoTitle },
+    { property: 'og:description', content: seoDesc },
+    { property: 'og:url', content: currentUrl },
+    { property: 'og:image', content: `${siteUrl}/images/og-cover.svg` },
+    { property: 'og:locale', content: locale.value === 'id' ? 'id_ID' : 'en_US' },
+    { property: 'og:locale:alternate', content: locale.value === 'id' ? 'en_US' : 'id_ID' },
     { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:title', content: seo.title },
-    { name: 'twitter:description', content: seo.description },
-    { name: 'twitter:image', content: `${siteUrl}${seo.ogImage}` }
+    { name: 'twitter:title', content: seoTitle },
+    { name: 'twitter:description', content: seoDesc },
+    { name: 'twitter:image', content: `${siteUrl}/images/og-cover.svg` }
   ],
   link: [
-    { rel: 'canonical', href: siteUrl }
+    { rel: 'canonical', href: currentUrl },
+    { rel: 'alternate', hreflang: 'id', href: siteUrl },
+    { rel: 'alternate', hreflang: 'en', href: `${siteUrl}/en` },
+    { rel: 'alternate', hreflang: 'x-default', href: siteUrl }
   ],
   script: [
     {
@@ -41,7 +50,7 @@ useHead({
             name: c.name,
             url: siteUrl,
             logo: `${siteUrl}/favicon.svg`,
-            description: seo.description,
+            description: t('seo.description'),
             foundingDate: '2023',
             telephone: c.contact.phone,
             email: c.contact.email,
@@ -60,7 +69,7 @@ useHead({
             '@id': `${siteUrl}/#business`,
             name: c.name,
             url: siteUrl,
-            image: `${siteUrl}${seo.ogImage}`,
+            image: `${siteUrl}/images/og-cover.svg`,
             telephone: c.contact.phone,
             priceRange: '$$',
             address: {
@@ -79,19 +88,16 @@ useHead({
             name: c.name,
             publisher: { '@id': `${siteUrl}/#organization` },
             inLanguage: 'id-ID'
-          },
-          ...services.map((s, i) => ({
-            '@type': 'Service',
-            '@id': `${siteUrl}/#service-${i + 1}`,
-            name: s.title,
-            description: s.description,
-            provider: { '@id': `${siteUrl}/#organization` },
-            areaServed: 'Indonesia'
-          }))
+          }
         ]
       })
     }
   ]
+})
+
+watch(locale, () => {
+  const head = useHead()
+  head.refresh?.()
 })
 </script>
 

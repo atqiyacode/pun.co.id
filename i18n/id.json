@@ -1,0 +1,100 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "projects": "Projects",
+    "contact": "Contact",
+    "cta": "Hubungi Kami"
+  },
+  "hero": {
+    "subtitle": "Perusahaan kontraktor pertambangan, eksplorasi hutan, dan pembangunan fasilitas penunjang — hadir di berbagai proyek dan lokasi di Indonesia sejak 2023.",
+    "statFounded": "Berdiri",
+    "statYears": "Tahun Berkarya",
+    "statSectors": "Sektor Utama",
+    "statCommitment": "Komitmen Prima",
+    "ctaServices": "Lihat Layanan",
+    "ctaContact": "Hubungi Kami"
+  },
+  "about": {
+    "eyebrow": "About Us",
+    "title": "Siapa Kami",
+    "heading": "Perusahaan swasta yang berdedikasi membangun negeri — dari hutan, tambang, hingga fasilitas penunjang.",
+    "paragraph1": "PT. Prima Utama Nasional (PUN) berdiri sejak 2023 sebagai perusahaan swasta yang bergerak di bidang kontraktor bangunan, fasilitas penunjang, eksplorasi hutan dan kandungan di dalamnya, serta pertambangan mineral dan batubara.",
+    "paragraph2": "Memberikan layanan prima merupakan dedikasi kami, dan kepuasan pelanggan merupakan kebanggaan bagi kami.",
+    "cardTitle": "Perusahaan Swasta Nasional",
+    "cardText": "Berdiri sejak 2023, berkomitmen menghadirkan layanan prima di sektor pertambangan, eksplorasi hutan, dan konstruksi.",
+    "badge": "Layanan Prima · Kepuasan Pelanggan",
+    "fields": [
+      { "title": "Kontraktor Bangunan", "description": "Konstruksi bangunan & infrastruktur berkualitas.", "icon": "building" },
+      { "title": "Fasilitas Penunjang", "description": "Pembangunan fasilitas pendukung operasional.", "icon": "gear" },
+      { "title": "Eksplorasi Hutan", "description": "Eksplorasi hutan dan kandungan di dalamnya.", "icon": "tree" },
+      { "title": "Pertambangan", "description": "Pertambangan mineral dan batubara.", "icon": "mountain" }
+    ]
+  },
+  "vision": {
+    "eyebrow": "Visi",
+    "title": "Menjadi pemain utama di sektor kontraktor pertambangan dan hutan.",
+    "description": "Menjadi pemimpin industri dalam solusi yang berkelanjutan dan inovatif, serta mengembangkan perusahaan agar semakin besar dan memberikan dampak bagi dunia."
+  },
+  "mission": {
+    "eyebrow": "Misi",
+    "title": "Hadir di berbagai proyek dan lokasi di Indonesia.",
+    "description": "Memberikan manfaat nyata bagi masyarakat setempat melalui kehadiran kami di berbagai proyek dan lokasi di Indonesia."
+  },
+  "journey": {
+    "eyebrow": "Our Journey",
+    "title": "Perjalanan Kami",
+    "subtitle": "Kisah perusahaan kami dari tahun ke tahun — setiap langkah adalah komitmen menuju layanan prima.",
+    "items": [
+      { "year": "2023", "title": "Pendirian Perusahaan", "description": "PT. Prima Utama Nasional resmi berdiri dan memulai langkah pertama di industri pertambangan & konstruksi." },
+      { "year": "2024", "title": "Ekspansi Operasional", "description": "Memperluas operasional dan membangun kepercayaan di berbagai proyek di Indonesia." },
+      { "year": "2025", "title": "Penambangan Nikel Kadar Tinggi", "description": "Berperan dalam penambangan nikel kadar tinggi untuk memenuhi kebutuhan smelter." },
+      { "year": "2026", "title": "Menatap Masa Depan", "description": "Terus bertumbuh, berinovasi, dan memberikan dampak yang lebih besar bagi dunia." }
+    ]
+  },
+  "quote": {
+    "text": "Dream big, work hard, and create magic.",
+    "author": "pt.pun"
+  },
+  "services": {
+    "eyebrow": "Our Service",
+    "title": "Layanan Kami",
+    "subtitle": "Lakukan sepenuh hati, atau lupakan sama sekali — itulah prinsip kerja kami di setiap penambangan & kontrak.",
+    "items": [
+      { "title": "Penambangan Batubara", "description": "Teknik menambang yang benar akan menghasilkan hasil yang baik dan efisiensi biaya.", "icon": "coal" },
+      { "title": "Penambangan Nikel", "description": "Proses penambangan nikel kadar tinggi memerlukan ketelitian tinggi agar material yang bersifat merusak kadar dapat dihindari.", "icon": "nickel" },
+      { "title": "Trading", "description": "Kepercayaan yang klien berikan kepada kami guna memenuhi kebutuhan kontrak mereka.", "icon": "trade" }
+    ]
+  },
+  "projects": {
+    "eyebrow": "Our Project",
+    "title": "Yang Telah Kami Kerjakan",
+    "subtitle": "Bukti nyata komitmen kami dalam memenuhi kebutuhan kontrak klien di berbagai lokasi Indonesia.",
+    "items": [
+      { "title": "Batubara — Kalimantan Timur", "category": "Batubara", "description": "Penambangan batubara di Kalimantan Timur, memenuhi kontrak kebutuhan Indonesia Power.", "location": "Kalimantan Timur", "client": "Indonesia Power" },
+      { "title": "Nikel Kadar Tinggi", "category": "Nikel", "description": "Penambangan nikel kadar tinggi guna memenuhi kebutuhan Smelter.", "location": "Indonesia", "client": "Smelter Partner" }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Hubungi Kami",
+    "subtitle": "Mari wujudkan kebutuhan kontrak Anda bersama kami — layanan prima adalah dedikasi kami.",
+    "phoneLabel": "Telepon / WhatsApp",
+    "emailLabel": "Email",
+    "websiteLabel": "Website",
+    "addressLabel": "Alamat",
+    "whatsapp": "WhatsApp",
+    "call": "Telepon",
+    "mapTitle": "Lokasi PT. Prima Utama Nasional"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  },
+  "scrollTop": "Kembali ke atas",
+  "seo": {
+    "title": "PT. Prima Utama Nasional — Kontraktor Pertambangan, Eksplorasi Hutan & Konstruksi",
+    "description": "PT. Prima Utama Nasional (PUN): perusahaan kontraktor pertambangan mineral & batubara, eksplorasi hutan, dan pembangunan fasilitas penunjang di Indonesia sejak 2023. Kepuasan pelanggan, kebanggaan kami.",
+    "keywords": "PT Prima Utama Nasional, PUN, kontraktor pertambangan, penambangan batubara, penambangan nikel, eksplorasi hutan, kontraktor bangunan, Kalimantan Timur, Indonesia Power, Jakarta Selatan"
+  }
+}
