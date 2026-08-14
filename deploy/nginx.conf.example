@@ -1,0 +1,40 @@
+# /etc/nginx/sites-available/pun.co.id
+server {
+    listen 80;
+    server_name pun.co.id www.pun.co.id;
+
+    # Redirect HTTP -> HTTPS
+    return 301 https://$host$request_uri;
+}
+
+server {
+    listen 443 ssl http2;
+    server_name pun.co.id www.pun.co.id;
+
+    root /var/www/pun.co.id;          # DEPLOY_PATH target rsync
+    index index.html;
+
+    # SSL cert (Certbot)
+    ssl_certificate     /etc/letsencrypt/live/pun.co.id/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/pun.co.id/privkey.pem;
+    ssl_protocols TLSv1.2 TLSv1.3;
+
+    # gzip static
+    gzip on;
+    gzip_types text/css application/javascript application/json image/svg+xml;
+    gzip_min_length 1024;
+
+    # Cache hashed assets 1yr, HTML 10min
+    location ~* \.(?:css|js|woff2?|png|jpg|jpeg|webp|svg|ico)$ {
+        expires 1y;
+        add_header Cache-Control "public, immutable";
+        try_files $uri =404;
+    }
+
+    location / {
+        try_files $uri $uri/ $uri.html /index.html;
+    }
+
+    # Prevent serving dotfiles (rsync --delete keeps .well-known for letsencrypt)
+    location ~ /\. { deny all; }
+}
