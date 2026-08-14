@@ -222,7 +222,7 @@ h3 { font-size: 22px; font-weight: 700; }
   position: absolute; right: -18px; bottom: -22px;
   background: var(--accent); color: #0a1120; border-radius: 14px; padding: 16px 22px;
   font-weight: 800; font-size: 14px; box-shadow: 0 16px 40px rgba(212, 175, 55, 0.35);
-  transform: rotate(-4deg);
+  transform: none;
 }
 @media (max-width: 960px) {
   .about-grid { grid-template-columns: 1fr; gap: 44px; }
