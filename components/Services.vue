@@ -3,8 +3,9 @@ import { icon } from '~/utils/icons'
 import { useReveal } from '~/composables/useReveal'
 import { useLocaleItems } from '~/composables/useLocaleItems'
 
+const company = await useCompanyData()
 useReveal()
-const items = useLocaleItems('services.items', 3, ['title', 'description', 'icon'])
+const items = useLocaleItems('services.items', company.counts.serviceItems, ['title', 'description', 'icon'])
 </script>
 
 <template>

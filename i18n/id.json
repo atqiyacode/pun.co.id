@@ -92,6 +92,11 @@
     "rights": "All rights reserved."
   },
   "scrollTop": "Kembali ke atas",
+  "notfound": {
+    "title": "Halaman Tidak Ditemukan",
+    "subtitle": "Halaman yang Anda cari tidak ada atau telah dipindahkan.",
+    "home": "Kembali ke Beranda"
+  },
   "seo": {
     "title": "PT. Prima Utama Nasional — Kontraktor Pertambangan, Eksplorasi Hutan & Konstruksi",
     "description": "PT. Prima Utama Nasional (PUN): perusahaan kontraktor pertambangan mineral & batubara, eksplorasi hutan, dan pembangunan fasilitas penunjang di Indonesia sejak 2023. Kepuasan pelanggan, kebanggaan kami.",

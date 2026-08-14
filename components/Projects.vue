@@ -3,8 +3,9 @@ import { icon } from '~/utils/icons'
 import { useReveal } from '~/composables/useReveal'
 import { useLocaleItems } from '~/composables/useLocaleItems'
 
+const company = await useCompanyData()
 useReveal()
-const items = useLocaleItems('projects.items', 2, ['title', 'category', 'description', 'location', 'client'])
+const items = useLocaleItems('projects.items', company.counts.projectItems, ['title', 'category', 'description', 'location', 'client'])
 
 const visualIcon = (title) => {
   const t = String(title || '').toLowerCase()

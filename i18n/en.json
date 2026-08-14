@@ -92,6 +92,11 @@
     "rights": "All rights reserved."
   },
   "scrollTop": "Back to top",
+  "notfound": {
+    "title": "Page Not Found",
+    "subtitle": "The page you are looking for does not exist or has been moved.",
+    "home": "Back to Home"
+  },
   "seo": {
     "title": "PT. Prima Utama Nasional — Mining, Forest Exploration & Construction Contractor",
     "description": "PT. Prima Utama Nasional (PUN): mineral & coal mining contractor, forest exploration, and supporting facilities development in Indonesia since 2023. Customer satisfaction is our pride.",

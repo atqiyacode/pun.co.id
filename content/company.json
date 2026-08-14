@@ -26,5 +26,11 @@
       { "value": "2", "labelKey": "hero.statSectors" },
       { "value": "100%", "labelKey": "hero.statCommitment" }
     ]
+  },
+  "counts": {
+    "aboutFields": 4,
+    "journeyItems": 4,
+    "serviceItems": 3,
+    "projectItems": 2
   }
 }

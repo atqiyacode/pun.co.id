@@ -6,7 +6,7 @@ import { useLocaleItems } from '~/composables/useLocaleItems'
 const company = await useCompanyData()
 const { company: c } = company
 useReveal()
-const fields = useLocaleItems('about.fields', 4, ['title', 'description', 'icon'])
+const fields = useLocaleItems('about.fields', company.counts.aboutFields, ['title', 'description', 'icon'])
 </script>
 
 <template>

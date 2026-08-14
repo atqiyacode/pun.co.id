@@ -24,19 +24,21 @@ useHead({
     { property: 'og:title', content: seoTitle },
     { property: 'og:description', content: seoDesc },
     { property: 'og:url', content: currentUrl },
-    { property: 'og:image', content: `${siteUrl}/images/og-cover.svg` },
+    { property: 'og:image', content: `${siteUrl}/images/og-cover.png` },
     { property: 'og:locale', content: locale.value === 'id' ? 'id_ID' : 'en_US' },
     { property: 'og:locale:alternate', content: locale.value === 'id' ? 'en_US' : 'id_ID' },
     { name: 'twitter:card', content: 'summary_large_image' },
     { name: 'twitter:title', content: seoTitle },
     { name: 'twitter:description', content: seoDesc },
-    { name: 'twitter:image', content: `${siteUrl}/images/og-cover.svg` }
+    { name: 'twitter:image', content: `${siteUrl}/images/og-cover.png` }
   ],
   link: [
     { rel: 'canonical', href: currentUrl },
     { rel: 'alternate', hreflang: 'id', href: siteUrl },
     { rel: 'alternate', hreflang: 'en', href: `${siteUrl}/en` },
-    { rel: 'alternate', hreflang: 'x-default', href: siteUrl }
+    { rel: 'alternate', hreflang: 'x-default', href: siteUrl },
+    { rel: 'icon', type: 'image/png', href: '/images/favicon.png' },
+    { rel: 'apple-touch-icon', sizes: '180x180', href: '/images/apple-touch-icon.png' }
   ],
   script: [
     {
@@ -87,8 +89,16 @@ useHead({
             url: siteUrl,
             name: c.name,
             publisher: { '@id': `${siteUrl}/#organization` },
-            inLanguage: 'id-ID'
-          }
+            inLanguage: locale.value === 'id' ? 'id-ID' : 'en-US'
+          },
+          ...[0, 1, 2].map((i) => ({
+            '@type': 'Service',
+            '@id': `${siteUrl}/#service-${i + 1}`,
+            name: t(`services.items.${i}.title`),
+            description: t(`services.items.${i}.description`),
+            provider: { '@id': `${siteUrl}/#organization` },
+            areaServed: 'Indonesia'
+          }))
         ]
       })
     }
@@ -106,5 +116,6 @@ watch(locale, () => {
     <Navbar />
     <NuxtPage />
     <Footer />
+    <WhatsAppFloat />
   </div>
 </template>

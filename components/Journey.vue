@@ -2,8 +2,9 @@
 import { useReveal } from '~/composables/useReveal'
 import { useLocaleItems } from '~/composables/useLocaleItems'
 
+const company = await useCompanyData()
 useReveal()
-const items = useLocaleItems('journey.items', 4, ['year', 'title', 'description'])
+const items = useLocaleItems('journey.items', company.counts.journeyItems, ['year', 'title', 'description'])
 </script>
 
 <template>
